@@ -1,21 +1,19 @@
-# Node
-node_modules/
-frontend/node_modules/
-frontend/dist/
-
 # Laravel
-vendor/
-backend/vendor/
-storage/*.key
-storage/framework/*
-storage/logs/*
-bootstrap/cache/*
+caliph-api/vendor/
+caliph-api/node_modules/
+caliph-api/storage/*.key
+caliph-api/storage/framework/*
+caliph-api/storage/logs/*
+caliph-api/bootstrap/cache/*
+
+# React
+caliph-web/node_modules/
+caliph-web/dist/
 
 # Environment files
-.env
-frontend/.env
-backend/.env
+caliph-api/.env
+caliph-web/.env
 
-# OS files
+# OS
 .DS_Store
 Thumbs.db

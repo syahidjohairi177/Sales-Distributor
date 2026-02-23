@@ -16,6 +16,9 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->appendToGroup('api', [  // <-- ADD THIS BLOCK
             EnsureFrontendRequestsAreStateful::class,
         ]);
+        $middleware->alias([
+            'hr' => \App\Http\Middleware\EnsureHrUser::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

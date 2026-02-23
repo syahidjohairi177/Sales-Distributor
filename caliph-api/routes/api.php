@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\Hr\SalesController;
+
+Route::middleware(['auth:sanctum', 'hr'])->prefix('hr')->group(function () {
+    Route::get('/sales', [SalesController::class, 'index']);
+    Route::post('/sales/bulk', [SalesController::class, 'bulkStore']);
+});
 
 Route::get('/ping', fn () => response()->json(['ok' => true]));
 
